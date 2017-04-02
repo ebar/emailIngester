@@ -1,3 +1,4 @@
+import com.typesafe.config.ConfigFactory
 import org.apache.spark.sql.catalyst.expressions.GenericRowWithSchema
 import org.apache.spark.sql.{Row, SparkSession}
 import org.apache.spark.{SparkContext, SparkConf}
@@ -5,7 +6,11 @@ import org.apache.spark.sql.functions._
 
 object EnronEmailAnalyser extends App {
 
-  val conf = new SparkConf().setAppName("email-analyser").setMaster("local")
+  val ingesterConfig = IngesterConfig(ConfigFactory.load())
+
+  val conf = new SparkConf()
+    .setAppName("email-analyser")
+    .setMaster(ingesterConfig.sparkMaster)
   val sc = new SparkContext(conf)
 
   val sqlContext = SparkSession
@@ -14,16 +19,14 @@ object EnronEmailAnalyser extends App {
     .appName("email-analyser")
     .getOrCreate()
 
-  // Read email file content from the text_000 directory. The mail content is found within the .eml files.
-  // Assumption is to count the word length of the entire files which excludes attachments but does include some metadata information.
+  // Calculate word count from text files in the the text_000 folder
 
   val emailFiles = sc.wholeTextFiles("unzipped/text_000")
   val wordCount = emailFiles.map{ case (file, content) =>
   content.split(" ").length }.mean
   println(s"Average email word count: $wordCount")
 
-  // The XML file in each directory contains a list of tags for each email.
-  // The recipient information is contained within the two tag fields #To and #CC.
+  // Calculate top 100 recipients from xml files
 
   val xmlFiles = sqlContext
     .read.format("com.databricks.spark.xml")
@@ -42,11 +45,9 @@ object EnronEmailAnalyser extends App {
     .withColumn("weighting", calculateWeighting(col("tag_name")))
     .select(col("weighting"), explode(split(col("tag_value"), ",")).alias("recipient"))
 
-
   val dfWeightedAndSummed = dfRecipientsWithWeighting
     .groupBy(col("weighting"), col("recipient"))
     .agg(sum(col("weighting")).alias("total_weighted"))
-
 
   val res1 = dfWeightedAndSummed.groupBy("recipient")
     .agg(sum(col("total_weighted")).alias("total"))
