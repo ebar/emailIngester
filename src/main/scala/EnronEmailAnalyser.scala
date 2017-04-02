@@ -27,7 +27,6 @@ class EnronEmailAnalyser(session: SparkSession) {
     // Calculate top 100 recipients from xml files
 
     val res1: Dataset[Row] = calculateTopRecipients("unzipped/*.xml")
-
     println(s"Top 100 email recipients:")
     res1.show(100)
   }
@@ -60,15 +59,15 @@ class EnronEmailAnalyser(session: SparkSession) {
       .orderBy(col("total").desc)
   }
 
-  def tagName = udf{ (row: GenericRowWithSchema) => s"${row.getAs[String]("_TagName")}"}
-  def tagValue = udf{(row: GenericRowWithSchema) => s"${row.getAs[String]("_TagValue")}"}
-  def convertCSVIntoCount = udf{ (list: String) => list.split(",").size}
-  def calculateWeighting = udf{ (tagName: String) => if (tagName.equals("#To")) 1.0 else 0.5}
-
   def calculateWordCount(directory: String) = {
     val emailFiles = session.sparkContext.wholeTextFiles(directory)
     emailFiles.map{ case (file, content) =>
       content.split(" ").length }.mean
   }
+
+  def tagName = udf{(row: GenericRowWithSchema) => s"${row.getAs[String]("_TagName")}"}
+  def tagValue = udf{(row: GenericRowWithSchema) => s"${row.getAs[String]("_TagValue")}"}
+  def convertCSVIntoCount = udf{(list: String) => list.split(",").size}
+  def calculateWeighting = udf{(tagName: String) => if (tagName.equals("#To")) 1.0 else 0.5}
 
 }

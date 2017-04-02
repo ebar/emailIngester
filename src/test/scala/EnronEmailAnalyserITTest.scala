@@ -29,7 +29,7 @@ class EnronEmailAnalyserITTest extends FlatSpec with Matchers {
 
 
     val topRecipient = topRecipients.head()
-    topRecipient should be(Row("pete.davis@enron.com", 4.5)) //
+    topRecipient should be(Row("pete.davis@enron.com", 4.5)) // He is emailed to 3 times and CCd 3 times
 
   }
 
