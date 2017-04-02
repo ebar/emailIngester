@@ -1,0 +1,44 @@
+Date: Fri, 6 Apr 2001 03:49:00 +0200 (CEST)
+From: Mail Delivery Subsystem <Mailer-Daemon@postmaster.enron.com>
+To: Eric.Linder@enron.com
+Subject: Returned mail: Host unknown (Name server: epeelectric.com: host not found)
+X-SDOC: 66808
+X-ZLID: zl-edrm-enron-v2-linder-e-223.eml
+
+^The original message was received at Fri, 6 Apr 2001 01:49:22 GMT
+from mailman.enron.com [192.168.189.66]
+
+   ----- The following addresses had permanent fatal errors -----
+<pwalls1@epeelectric.com>
+
+   ----- Transcript of session follows -----
+550 <pwalls1@epeelectric.com>... Host unknown (Name server: epeelectric.com: 
+host not found)
+
+   ----- Original message follows -----
+
+Return-Path: <Eric.Linder@enron.com>
+Received: from mailman.enron.com (mailman.enron.com [192.168.189.66])
+ by postmaster.enron.com (8.8.8/8.8.8/postmaster-1.00) with ESMTP id BAA29909
+ for <pwalls1@epeelectric.com>; Fri, 6 Apr 2001 01:49:22 GMT
+From: Eric.Linder@enron.com
+Received: from nahou-msmsw03px.corp.enron.com (nahou-msmsw03px.corp.enron.com 
+[172.28.10.39])
+ by mailman.enron.com (8.10.1/8.10.1/corp-1.05) with ESMTP id f361nML04825
+ for <pwalls1@epeelectric.com>; Thu, 5 Apr 2001 20:49:22 -0500 (CDT)
+Received: from ene-mta01.enron.com (unverified) by 
+nahou-msmsw03px.corp.enron.com
+ (Content Technologies SMTPRS 4.1.5) with ESMTP id 
+<Tac1c0a2713a52bc9d93bf@nahou-msmsw03px.corp.enron.com> for 
+<pwalls1@epeelectric.com>;
+ Thu, 5 Apr 2001 20:49:21 -0500
+Subject: preschedule for April
+To: pwalls1@epeelectric.com
+X-Mailer: Lotus Notes Release 5.0.3  March 21, 2000
+Message-ID: <OFC5986D44.9A05F66C-ON88256A26.000911A5@enron.com>
+Date: Thu, 5 Apr 2001 20:49:18 -0500
+X-MIMETrack: Serialize by Router on ENE-MTA01/Enron(Release 5.0.6
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL Technologies, Inc. This Data Set is licensed under a Creative Commons Attribution 3.0 United States License <http://creativecommons.org/licenses/by/3.0/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http://www.zlti.com)."
+***********

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Root MajorVersion="1" MinorVersion="0" CaseId="linder-e_636_LSHX" Description="CaseUtil">
+    <Batch name=" Batch 1">
+        <Documents>
+            <Document DocID="3.134085.OJQ4TUYWGNX4DKELJY2PTFTYYLBB00LIB" DocType="Message" MimeType="message/rfc822">
+                <Tags>
+                    <Tag TagName="#From" TagDataType="Text" TagValue="Schedule Crawler &lt;pete.davis@enron.com&gt;"/>
+                    <Tag TagName="#To" TagDataType="Text" TagValue="pete.davis@enron.com"/>
+                    <Tag TagName="#CC" TagDataType="Text" TagValue="bert.meyers@enron.com, bill.williams.III@enron.com, Craig.Dean@enron.com, dporter3@enron.com, Eric.Linder@enron.com, Geir.Solberg@enron.com, jbryson@enron.com, leaf.harasin@enron.com, monika.causholli@enron.com, mark.guzman@enron.com, pete.davis@enron.com, ryan.slinger@enron.com, steven.merris@enron.com"/>
+                    <Tag TagName="#Subject" TagDataType="Text" TagValue="Schedule Crawler: HourAhead Failure &lt;CODESITE&gt;"/>
+                    <Tag TagName="#DateSent" TagDataType="DateTime" TagValue="2001-04-28T18:58:00.0+00:00"/>
+                    <Tag TagName="#HasAttachments" TagDataType="Boolean" TagValue="true"/>
+                    <Tag TagName="#AttachmentCount" TagDataType="Integer" TagValue="1"/>
+                    <Tag TagName="#AttachmentNames" TagDataType="Text" TagValue="$RFC822.eml"/>
+                    <Tag TagName="X-SDOC" TagDataType="Text" TagValue="68460"/>
+                    <Tag TagName="X-ZLID" TagDataType="Text" TagValue="zl-edrm-enron-v2-linder-e-1869.eml"/>
+                </Tags>
+                <Files>
+                    <File FileType="Native">
+                        <ExternalFile FilePath="native_000" FileName="3.134085.OJQ4TUYWGNX4DKELJY2PTFTYYLBB00LIB.eml" FileSize="4314" Hash="0DD882F7E080835831FD0BAA40503839"/>
+                    </File>
+                    <File FileType="Text">
+                        <ExternalFile FilePath="text_000" FileName="3.134085.OJQ4TUYWGNX4DKELJY2PTFTYYLBB00LIB.txt" FileSize="1064" Hash="1A0054A359F94E3C33F49AC8AE930690"/>
+                    </File>
+                </Files>
+                <Locations>
+                    <Location>
+                        <Custodian>Eric Linder&lt;eric.linder@enron.com&gt;</Custodian>
+                        <LocationURI>linder-e\Discussion threads</LocationURI>
+                    </Location>
+                </Locations>
+            </Document>
+            <Document DocID="3.134085.OJQ4TUYWGNX4DKELJY2PTFTYYLBB00LIB.1" DocType="File" MimeType="application/octet-stream">
+                <Tags>
+                    <Tag TagName="#FileName" TagDataType="Text" TagValue="$RFC822.eml"/>
+                    <Tag TagName="#FileExtension" TagDataType="Text" TagValue="eml"/>
+                    <Tag TagName="#FileSize" TagDataType="LongInteger" TagValue="2531"/>
+                    <Tag TagName="#DateCreated" TagDataType="DateTime" TagValue="2001-04-28T18:58:00.0+00:00"/>
+                    <Tag TagName="#DateModified" TagDataType="DateTime" TagValue="2001-04-28T18:58:00.0+00:00"/>
+                </Tags>
+                <Files>
+                    <File FileType="Native">
+                        <ExternalFile FileSize="2531" Hash="304A7589555C599DEF75240999D5E7EC" FileName="3.134085.OJQ4TUYWGNX4DKELJY2PTFTYYLBB00LIB.1.eml" FilePath="native_000"/>
+                    </File>
+                    <File FileType="Text">
+                        <ExternalFile FilePath="text_000" FileName="3.134085.OJQ4TUYWGNX4DKELJY2PTFTYYLBB00LIB.1.txt" FileSize="0" Hash="D41D8CD98F00B204E9800998ECF8427E"/>
+                    </File>
+                </Files>
+            </Document>
+            <Document DocID="3.134086.MDA0GXCO124SODUOPHK4BMSZG3DOCCSLB" DocType="Message" MimeType="message/rfc822">
+                <Tags>
+                    <Tag TagName="#From" TagDataType="Text" TagValue="Schedule Crawler &lt;pete.davis@enron.com&gt;"/>
+                    <Tag TagName="#To" TagDataType="Text" TagValue="pete.davis@enron.com"/>
+                    <Tag TagName="#CC" TagDataType="Text" TagValue="bert.meyers@enron.com, bill.williams.III@enron.com, Craig.Dean@enron.com, dporter3@enron.com, Eric.Linder@enron.com, Geir.Solberg@enron.com, jbryson@enron.com, leaf.harasin@enron.com, monika.causholli@enron.com, mark.guzman@enron.com, pete.davis@enron.com, ryan.slinger@enron.com, steven.merris@enron.com"/>
+                    <Tag TagName="#Subject" TagDataType="Text" TagValue="Start Date: 4/28/01; HourAhead hour: 17;  &lt;CODESITE&gt;"/>
+                    <Tag TagName="#DateSent" TagDataType="DateTime" TagValue="2001-04-28T16:41:00.0+00:00"/>
+                    <Tag TagName="#HasAttachments" TagDataType="Boolean" TagValue="true"/>
+                    <Tag TagName="#AttachmentCount" TagDataType="Integer" TagValue="1"/>
+                    <Tag TagName="#AttachmentNames" TagDataType="Text" TagValue="$RFC822.eml"/>
+                    <Tag TagName="X-SDOC" TagDataType="Text" TagValue="68458"/>
+                    <Tag TagName="X-ZLID" TagDataType="Text" TagValue="zl-edrm-enron-v2-linder-e-1867.eml"/>
+                </Tags>
+                <Files>
+                    <File FileType="Native">
+                        <ExternalFile FilePath="native_000" FileName="3.134086.MDA0GXCO124SODUOPHK4BMSZG3DOCCSLB.eml" FileSize="4555" Hash="7A3220442843777600FC04C1758C0757"/>
+                    </File>
+                    <File FileType="Text">
+                        <ExternalFile FilePath="text_000" FileName="3.134086.MDA0GXCO124SODUOPHK4BMSZG3DOCCSLB.txt" FileSize="1182" Hash="3409BE656BF06D507CC51AF68CD808A0"/>
+                    </File>
+                </Files>
+                <Locations>
+                    <Location>
+                        <Custodian>Eric Linder&lt;eric.linder@enron.com&gt;</Custodian>
+                        <LocationURI>linder-e\Discussion threads</LocationURI>
+                    </Location>
+                </Locations>
+            </Document>
+            <Document DocID="3.134086.MDA0GXCO124SODUOPHK4BMSZG3DOCCSLB.1" DocType="File" MimeType="application/octet-stream">
+                <Tags>
+                    <Tag TagName="#FileName" TagDataType="Text" TagValue="$RFC822.eml"/>
+                    <Tag TagName="#FileExtension" TagDataType="Text" TagValue="eml"/>
+                    <Tag TagName="#FileSize" TagDataType="LongInteger" TagValue="2650"/>
+                    <Tag TagName="#DateCreated" TagDataType="DateTime" TagValue="2001-04-28T16:41:00.0+00:00"/>
+                    <Tag TagName="#DateModified" TagDataType="DateTime" TagValue="2001-04-28T16:41:00.0+00:00"/>
+                </Tags>
+                <Files>
+                    <File FileType="Native">
+                        <ExternalFile FileSize="2650" Hash="28D2A63F7A81F835FC382C993515736E" FileName="3.134086.MDA0GXCO124SODUOPHK4BMSZG3DOCCSLB.1.eml" FilePath="native_000"/>
+                    </File>
+                    <File FileType="Text">
+                        <ExternalFile FilePath="text_000" FileName="3.134086.MDA0GXCO124SODUOPHK4BMSZG3DOCCSLB.1.txt" FileSize="0" Hash="D41D8CD98F00B204E9800998ECF8427E"/>
+                    </File>
+                </Files>
+            </Document>
+            <Document DocID="3.134087.FC0GZWSRUAGY2R5O0WOB4FI02CL1FYKQB" DocType="Message" MimeType="message/rfc822">
+                <Tags>
+                    <Tag TagName="#From" TagDataType="Text" TagValue="Bill Williams III"/>
+                    <Tag TagName="#To" TagDataType="Text" TagValue="Portland Shift"/>
+                    <Tag TagName="#Subject" TagDataType="Text" TagValue="ST-Cali short position for Monday 04/30"/>
+                    <Tag TagName="#DateSent" TagDataType="DateTime" TagValue="2001-04-28T12:01:00.0+00:00"/>
+                    <Tag TagName="#HasAttachments" TagDataType="Boolean" TagValue="false"/>
+                    <Tag TagName="X-SDOC" TagDataType="Text" TagValue="68455"/>
+                    <Tag TagName="X-ZLID" TagDataType="Text" TagValue="zl-edrm-enron-v2-linder-e-1864.eml"/>
+                </Tags>
+                <Files>
+                    <File FileType="Native">
+                        <ExternalFile FilePath="native_000" FileName="3.134087.FC0GZWSRUAGY2R5O0WOB4FI02CL1FYKQB.eml" FileSize="982" Hash="6E7C90E389E2A1B849407BCC830311DA"/>
+                    </File>
+                    <File FileType="Text">
+                        <ExternalFile FilePath="text_000" FileName="3.134087.FC0GZWSRUAGY2R5O0WOB4FI02CL1FYKQB.txt" FileSize="740" Hash="1264BE5A7C8881B814A8F875CFEC9711"/>
+                    </File>
+                </Files>
+                <Locations>
+                    <Location>
+                        <Custodian>Eric Linder&lt;eric.linder@enron.com&gt;</Custodian>
+                        <LocationURI>linder-e\Discussion threads</LocationURI>
+                    </Location>
+                </Locations>
+            </Document>
+            <Document DocID="3.134088.PRDR35EMYKQZOGMHZE2GHIG0ABI3CVEPB" DocType="Message" MimeType="message/rfc822">
+                <Tags>
+                    <Tag TagName="#From" TagDataType="Text" TagValue="Schedule Crawler &lt;pete.davis@enron.com&gt;"/>
+                    <Tag TagName="#To" TagDataType="Text" TagValue="pete.davis@enron.com"/>
+                    <Tag TagName="#CC" TagDataType="Text" TagValue="bert.meyers@enron.com, bill.williams.III@enron.com, Craig.Dean@enron.com, dporter3@enron.com, Eric.Linder@enron.com, Geir.Solberg@enron.com, jbryson@enron.com, leaf.harasin@enron.com, monika.causholli@enron.com, mark.guzman@enron.com, pete.davis@enron.com, ryan.slinger@enron.com, steven.merris@enron.com"/>
+                    <Tag TagName="#Subject" TagDataType="Text" TagValue="Start Date: 4/28/01; HourAhead hour: 20;  &lt;CODESITE&gt;"/>
+                    <Tag TagName="#DateSent" TagDataType="DateTime" TagValue="2001-04-28T19:41:00.0+00:00"/>
+                    <Tag TagName="#HasAttachments" TagDataType="Boolean" TagValue="true"/>
+                    <Tag TagName="#AttachmentCount" TagDataType="Integer" TagValue="1"/>
+                    <Tag TagName="#AttachmentNames" TagDataType="Text" TagValue="$RFC822.eml"/>
+                    <Tag TagName="X-SDOC" TagDataType="Text" TagValue="68461"/>
+                    <Tag TagName="X-ZLID" TagDataType="Text" TagValue="zl-edrm-enron-v2-linder-e-1870.eml"/>
+                </Tags>
+                <Files>
+                    <File FileType="Native">
+                        <ExternalFile FilePath="native_000" FileName="3.134088.PRDR35EMYKQZOGMHZE2GHIG0ABI3CVEPB.eml" FileSize="4555" Hash="8E7058A011F041225273CBF8EBCEC021"/>
+                    </File>
+                    <File FileType="Text">
+                        <ExternalFile FilePath="text_000" FileName="3.134088.PRDR35EMYKQZOGMHZE2GHIG0ABI3CVEPB.txt" FileSize="1182" Hash="92E1069A2AA2089161A66402BA0568B5"/>
+                    </File>
+                </Files>
+                <Locations>
+                    <Location>
+                        <Custodian>Eric Linder&lt;eric.linder@enron.com&gt;</Custodian>
+                        <LocationURI>linder-e\Discussion threads</LocationURI>
+                    </Location>
+                </Locations>
+            </Document>
+            </Documents>
+        <Relationships>
+            <Relationship Type="Attachment" ParentDocId="3.135749.BMBQPKP2FWWFOGWQA1U0CTQ2AFDRE5UDB" ChildDocId="3.135749.BMBQPKP2FWWFOGWQA1U0CTQ2AFDRE5UDB.3"/>
+        </Relationships>
+    </Batch>
+</Root>
