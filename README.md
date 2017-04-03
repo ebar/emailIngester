@@ -36,14 +36,16 @@ Run sbt assembly to package up the application.
 
 Create an ec2 instance and attach EBS volume snap-d203feb5
 
-Mount the data using: sudo mount /dev/xvdf /data
+Mount the data using: 
+
+```sudo mount /dev/xvdf /data```
 
 Install Scala and Spark on the instance
 
 Execute the job as follows, supplying either 'local' or 'remote' as a mode.
 
-spark-submit --class ZipExtractor emailIngester-assembly-1.0.jar remote ### This is incomplete 
+```spark-submit --class ZipExtractor emailIngester-assembly-1.0.jar remote``` ### This is incomplete
 
 The next stage relies on unzipped data being present in a folder or s3 bucket.
 
-spark-submit --class EnronEmailAnalyser emailIngester-assembly-1.0.jar remote
+```spark-submit --class EnronEmailAnalyser emailIngester-assembly-1.0.jar remote```
