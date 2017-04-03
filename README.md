@@ -46,6 +46,6 @@ Execute the job as follows, supplying either 'local' or 'remote' as a mode.
 
 ```spark-submit --class ZipExtractor emailIngester-assembly-1.0.jar remote``` ### This is incomplete
 
-The next stage relies on unzipped data being present in a folder or s3 bucket.
+The next stage can be run on an EMR cluster, but it relies on unzipped data being present in an s3 bucket.
 
 ```spark-submit --class EnronEmailAnalyser emailIngester-assembly-1.0.jar remote```

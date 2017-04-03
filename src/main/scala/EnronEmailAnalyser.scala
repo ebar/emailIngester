@@ -28,11 +28,11 @@ class EnronEmailAnalyser(session: SparkSession, config: IngesterConfig) {
   def process() = {
     // Calculate word count from text files in the the text_000 folder
 
-    val wordCount = calculateWordCount(s"${config.unzippedDirectory}/text_000")
+    val wordCount = calculateWordCount(s"${config.unzippedS3Bucket}/text_000")
 
     // Calculate top 100 recipients from xml files
 
-    val res1: Dataset[Row] = calculateTopRecipients(s"${config.unzippedDirectory}/*.xml")
+    val res1: Dataset[Row] = calculateTopRecipients(s"${config.unzippedS3Bucket}/*.xml")
 
     //Display
     res1.show(100)
