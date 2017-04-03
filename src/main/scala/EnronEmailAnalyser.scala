@@ -3,9 +3,16 @@ import org.apache.spark.sql.catalyst.expressions.GenericRowWithSchema
 import org.apache.spark.sql.{Row, Dataset, SparkSession}
 import org.apache.spark.sql.functions._
 
+import scala.util.{Failure, Success, Try}
+
 object EnronEmailAnalyser extends App {
 
-  val ingesterConfig = IngesterConfig(ConfigFactory.load())
+  val mode = Try(args(0)) match {
+    case Success(m) => m
+    case Failure(e) => throw new RuntimeException("Please specify 'local' or 'remote' as a command line argument")
+  }
+
+  val ingesterConfig = IngesterConfig(ConfigFactory.load(mode))
 
   val sparkSession = SparkSession
     .builder()
@@ -13,22 +20,23 @@ object EnronEmailAnalyser extends App {
     .master(ingesterConfig.sparkMaster)
     .getOrCreate()
 
-  new EnronEmailAnalyser(sparkSession).process()
+  new EnronEmailAnalyser(sparkSession, ingesterConfig).process()
 }
 
-class EnronEmailAnalyser(session: SparkSession) {
+class EnronEmailAnalyser(session: SparkSession, config: IngesterConfig) {
 
   def process() = {
     // Calculate word count from text files in the the text_000 folder
 
-    val wordCount = calculateWordCount("unzipped/text_000")
-    println(s"Average email word count: $wordCount")
+    val wordCount = calculateWordCount(s"${config.unzippedDirectory}/text_000")
 
     // Calculate top 100 recipients from xml files
 
-    val res1: Dataset[Row] = calculateTopRecipients("unzipped/*.xml")
-    println(s"Top 100 email recipients:")
+    val res1: Dataset[Row] = calculateTopRecipients(s"${config.unzippedDirectory}/*.xml")
+
+    //Display
     res1.show(100)
+    println(s"Average email word count: $wordCount")
   }
 
 

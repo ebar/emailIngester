@@ -1,7 +1,5 @@
 import java.io.{ByteArrayOutputStream, ByteArrayInputStream}
 import java.util.zip.ZipInputStream
-
-
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain
 import com.amazonaws.regions.Regions
 import com.amazonaws.services.s3.AmazonS3ClientBuilder
@@ -10,14 +8,21 @@ import org.apache.spark.input.PortableDataStream
 import org.apache.spark.{SparkConf, SparkContext}
 import com.amazonaws.services.s3.model.ObjectMetadata
 
+import scala.util.{Failure, Success, Try}
+
 object ZipExtractor extends App {
+
+  val mode = Try(args(0)) match {
+    case Success(m) => m
+    case Failure(e) => throw new RuntimeException("Please specify 'local' or 'remote' as a command line argument")
+  }
 
   val s3Client = AmazonS3ClientBuilder.standard()
     .withCredentials(new DefaultAWSCredentialsProviderChain)
     .withRegion(Regions.US_WEST_2)
     .build()
 
-  val ingesterConfig = IngesterConfig(ConfigFactory.load())
+  val ingesterConfig = IngesterConfig(ConfigFactory.load(mode))
 
   val conf = new SparkConf()
     .setAppName("zip-extractor")
@@ -41,7 +46,7 @@ object ZipExtractor extends App {
           val is = new ByteArrayInputStream(out.toByteArray)
           val meta = new ObjectMetadata()
           meta.setContentLength(out.size())
-          s3Client.putObject(ingesterConfig.targetS3Bucket, file.getName, is, meta)
+          s3Client.putObject(ingesterConfig.unzippedDirectory, file.getName, is, meta)
           out.close()
         }
       }
